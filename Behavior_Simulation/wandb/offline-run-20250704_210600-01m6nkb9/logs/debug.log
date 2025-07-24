@@ -1,0 +1,32 @@
+2025-07-04 21:06:00,714 INFO    MainThread:4111497 [wandb_setup.py:_flush():77] Current SDK version is 0.17.9
+2025-07-04 21:06:00,714 INFO    MainThread:4111497 [wandb_setup.py:_flush():77] Configure stats pid to 4111497
+2025-07-04 21:06:00,714 INFO    MainThread:4111497 [wandb_setup.py:_flush():77] Loading settings from /home/liqifeng/.config/wandb/settings
+2025-07-04 21:06:00,714 INFO    MainThread:4111497 [wandb_setup.py:_flush():77] Loading settings from /data1/lqf/behavior_simulation/wandb/settings
+2025-07-04 21:06:00,714 INFO    MainThread:4111497 [wandb_setup.py:_flush():77] Loading settings from environment variables: {}
+2025-07-04 21:06:00,714 INFO    MainThread:4111497 [wandb_setup.py:_flush():77] Applying setup settings: {'_disable_service': False}
+2025-07-04 21:06:00,714 INFO    MainThread:4111497 [wandb_setup.py:_flush():77] Inferring run settings from compute environment: {'program_relpath': 'test.py', 'program_abspath': '/data1/lqf/behavior_simulation/test.py', 'program': '/data1/lqf/behavior_simulation/test.py'}
+2025-07-04 21:06:00,714 INFO    MainThread:4111497 [wandb_init.py:_log_setup():524] Logging user logs to /data1/lqf/behavior_simulation/wandb/offline-run-20250704_210600-01m6nkb9/logs/debug.log
+2025-07-04 21:06:00,714 INFO    MainThread:4111497 [wandb_init.py:_log_setup():525] Logging internal logs to /data1/lqf/behavior_simulation/wandb/offline-run-20250704_210600-01m6nkb9/logs/debug-internal.log
+2025-07-04 21:06:00,714 INFO    MainThread:4111497 [wandb_init.py:init():608] calling init triggers
+2025-07-04 21:06:00,714 INFO    MainThread:4111497 [wandb_init.py:init():615] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.02, 'architecture': 'CNN', 'dataset': 'CIFAR-100', 'epochs': 10}
+2025-07-04 21:06:00,714 INFO    MainThread:4111497 [wandb_init.py:init():658] starting backend
+2025-07-04 21:06:00,714 INFO    MainThread:4111497 [wandb_init.py:init():662] setting up manager
+2025-07-04 21:06:00,718 INFO    MainThread:4111497 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-07-04 21:06:00,718 INFO    MainThread:4111497 [wandb_init.py:init():670] backend started and connected
+2025-07-04 21:06:00,723 INFO    MainThread:4111497 [wandb_init.py:init():768] updated telemetry
+2025-07-04 21:06:00,724 INFO    MainThread:4111497 [wandb_init.py:init():801] communicating run to backend with 90.0 second timeout
+2025-07-04 21:06:00,730 INFO    MainThread:4111497 [wandb_init.py:init():852] starting run threads in backend
+2025-07-04 21:06:03,565 INFO    MainThread:4111497 [wandb_run.py:_console_start():2465] atexit reg
+2025-07-04 21:06:03,565 INFO    MainThread:4111497 [wandb_run.py:_redirect():2311] redirect: wrap_raw
+2025-07-04 21:06:03,565 INFO    MainThread:4111497 [wandb_run.py:_redirect():2376] Wrapping output streams.
+2025-07-04 21:06:03,565 INFO    MainThread:4111497 [wandb_run.py:_redirect():2401] Redirects installed.
+2025-07-04 21:06:03,566 INFO    MainThread:4111497 [wandb_init.py:init():895] run started, returning control to user process
+2025-07-04 21:06:03,566 INFO    MainThread:4111497 [wandb_run.py:_finish():2162] finishing run my-awesome-team-name/my-awesome-project/01m6nkb9
+2025-07-04 21:06:03,566 INFO    MainThread:4111497 [wandb_run.py:_atexit_cleanup():2426] got exitcode: 0
+2025-07-04 21:06:03,566 INFO    MainThread:4111497 [wandb_run.py:_restore():2408] restore
+2025-07-04 21:06:03,566 INFO    MainThread:4111497 [wandb_run.py:_restore():2414] restore done
+2025-07-04 21:06:03,566 INFO    MainThread:4111497 [wandb_run.py:_on_finish():2679] communicating current version
+2025-07-04 21:06:03,568 INFO    MainThread:4111497 [wandb_run.py:_on_finish():2688] got version response 
+2025-07-04 21:06:06,297 INFO    MainThread:4111497 [wandb_run.py:_footer_history_summary_info():4088] rendering history
+2025-07-04 21:06:06,297 INFO    MainThread:4111497 [wandb_run.py:_footer_history_summary_info():4120] rendering summary

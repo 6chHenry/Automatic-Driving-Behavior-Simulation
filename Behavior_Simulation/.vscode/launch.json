@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "catk-debug-lzh",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/home/ma-user/work/behavior_simulation2/catk/src/run.py",
+            "cwd": "/home/ma-user/work/behavior_simulation2/catk",
+            "python": "/home/ma-user/miniconda3/envs/catk/bin/python",
+            "console": "integratedTerminal",
+            "args": ["experiment=pre_bc","task_name=pre_bc-debug"],
+            "env": {"CUDA_VISIBLE_DEVICES": "7"}
+        },
+        {
+            "name": "catk-inference-debug-lzh",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/home/ma-user/work/behavior_simulation2/catk/src/run.py",
+            "cwd": "/home/ma-user/work/behavior_simulation2/catk",
+            "python": "/home/ma-user/miniconda3/envs/catk/bin/python",
+            "console": "integratedTerminal",
+            "args": ["experiment=local_val","task_name=local_val-debug"],
+            "env": {"CUDA_VISIBLE_DEVICES": "7"}
+        }
+    ]
+}
