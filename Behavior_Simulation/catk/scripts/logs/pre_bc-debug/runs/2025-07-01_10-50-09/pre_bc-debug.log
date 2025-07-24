@@ -1,0 +1,10 @@
+[2025-07-01 10:50:10,035][__main__][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-07-01 10:50:10,035][src.utils.rich_utils][WARNING] - [rank: 0] Field 'extras' not found in config. Skipping 'extras' config printing...
+[2025-07-01 10:50:10,075][__main__][INFO] - [rank: 0] Instantiating datamodule <src.smart.datamodules.MultiDataModule>
+[2025-07-01 10:50:10,457][__main__][INFO] - [rank: 0] Instantiating model <src.smart.model.smart.SMART>
+[2025-07-01 10:50:12,807][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-07-01 10:50:12,807][src.utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-07-01 10:50:12,810][src.utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-07-01 10:50:12,810][src.utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.LearningRateMonitor>
+[2025-07-01 10:50:12,811][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-07-01 10:50:12,811][src.utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>

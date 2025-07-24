@@ -1,0 +1,105 @@
+2025-07-01 10:50:18,254 INFO    StreamThr :3154179 [internal.py:wandb_internal():85] W&B internal server running at pid: 3154179, started at: 2025-07-01 10:50:18.254502
+2025-07-01 10:50:18,255 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: status
+2025-07-01 10:50:18,258 INFO    WriterThread:3154179 [datastore.py:open_for_write():87] open: /data1/lqf/behavior_simulation/catk/scripts/logs/pre_bc-debug/runs/2025-07-01_10-50-09/wandb/run-20250701_105018-r783v10h/run-r783v10h.wandb
+2025-07-01 10:50:18,258 DEBUG   SenderThread:3154179 [sender.py:send():391] send: header
+2025-07-01 10:50:18,261 DEBUG   SenderThread:3154179 [sender.py:send():391] send: run
+2025-07-01 10:50:18,262 INFO    SenderThread:3154179 [sender.py:_setup_resume():761] checking resume status for YOUR_ENTITY/clsft-catk/r783v10h
+2025-07-01 10:50:23,262 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: keepalive
+2025-07-01 10:50:28,262 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: keepalive
+2025-07-01 10:50:33,263 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: keepalive
+2025-07-01 10:50:38,264 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: keepalive
+2025-07-01 10:50:43,265 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: keepalive
+2025-07-01 10:50:48,265 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: keepalive
+2025-07-01 10:50:53,266 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: keepalive
+2025-07-01 10:50:58,267 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: keepalive
+2025-07-01 10:51:03,268 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: keepalive
+2025-07-01 10:51:08,268 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: keepalive
+2025-07-01 10:51:13,269 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: keepalive
+2025-07-01 10:51:18,270 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: keepalive
+2025-07-01 10:51:21,844 INFO    SenderThread:3154179 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/connection.py", line 207, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x7f698512bdd0>, 'Connection to api.wandb.ai timed out. (connect timeout=20)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f698512bdd0>, 'Connection to api.wandb.ai timed out. (connect timeout=20)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/wandb/sdk/internal/internal_api.py", line 345, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/wandb/sdk/lib/gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/requests/adapters.py", line 688, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f698512bdd0>, 'Connection to api.wandb.ai timed out. (connect timeout=20)'))
+2025-07-01 10:51:23,270 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: keepalive
+2025-07-01 10:51:28,271 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: keepalive
+2025-07-01 10:51:33,272 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: keepalive
+2025-07-01 10:51:38,273 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: keepalive
+2025-07-01 10:51:43,273 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: keepalive
+2025-07-01 10:51:48,274 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: cancel
+2025-07-01 10:51:48,274 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: cancel
+2025-07-01 10:51:48,274 DEBUG   SenderThread:3154179 [sender.py:send():400] Record cancelled: run
+2025-07-01 10:51:48,274 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: status_report
+2025-07-01 10:51:48,792 DEBUG   HandlerThread:3154179 [handler.py:handle_request():158] handle_request: shutdown
+2025-07-01 10:51:48,793 INFO    HandlerThread:3154179 [handler.py:finish():884] shutting down handler
+2025-07-01 10:51:49,274 INFO    SenderThread:3154179 [sender.py:finish():1631] shutting down sender
+2025-07-01 10:51:49,274 INFO    WriterThread:3154179 [datastore.py:close():296] close: /data1/lqf/behavior_simulation/catk/scripts/logs/pre_bc-debug/runs/2025-07-01_10-50-09/wandb/run-20250701_105018-r783v10h/run-r783v10h.wandb

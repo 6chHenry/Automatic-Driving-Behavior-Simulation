@@ -1,0 +1,4 @@
+[2025-07-14 19:31:05,465][__main__][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-07-14 19:31:05,465][src.utils.rich_utils][WARNING] - [rank: 0] Field 'extras' not found in config. Skipping 'extras' config printing...
+[2025-07-14 19:31:05,509][__main__][INFO] - [rank: 0] Instantiating datamodule <src.smart.datamodules.MultiDataModule>
+[2025-07-14 19:31:05,845][__main__][INFO] - [rank: 0] Instantiating model <src.smart.model.smart.SMART>

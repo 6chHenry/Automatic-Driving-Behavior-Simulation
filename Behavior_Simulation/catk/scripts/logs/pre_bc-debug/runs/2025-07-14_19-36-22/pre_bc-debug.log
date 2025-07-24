@@ -1,0 +1,14 @@
+[2025-07-14 19:36:22,886][__main__][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-07-14 19:36:22,886][src.utils.rich_utils][WARNING] - [rank: 0] Field 'extras' not found in config. Skipping 'extras' config printing...
+[2025-07-14 19:36:22,930][__main__][INFO] - [rank: 0] Instantiating datamodule <src.smart.datamodules.MultiDataModule>
+[2025-07-14 19:36:24,088][__main__][INFO] - [rank: 0] Instantiating model <src.smart.model.smart.SMART>
+[2025-07-14 19:36:27,190][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-07-14 19:36:27,191][src.utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-07-14 19:36:27,195][src.utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-07-14 19:36:27,196][src.utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.LearningRateMonitor>
+[2025-07-14 19:36:27,196][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-07-14 19:36:27,196][src.utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.wandb.WandbLogger>
+[2025-07-14 19:36:31,900][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-07-14 19:36:31,979][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-07-14 19:36:31,985][__main__][INFO] - [rank: 0] Resuming from ckpt: cfg.ckpt_path=None
+[2025-07-14 19:36:31,985][__main__][INFO] - [rank: 0] Starting training!

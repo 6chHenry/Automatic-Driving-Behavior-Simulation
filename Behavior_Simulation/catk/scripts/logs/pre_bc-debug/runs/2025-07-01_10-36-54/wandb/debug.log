@@ -1,0 +1,106 @@
+2025-07-01 10:37:02,947 INFO    MainThread:3132253 [wandb_setup.py:_flush():77] Current SDK version is 0.17.9
+2025-07-01 10:37:02,947 INFO    MainThread:3132253 [wandb_setup.py:_flush():77] Configure stats pid to 3132253
+2025-07-01 10:37:02,947 INFO    MainThread:3132253 [wandb_setup.py:_flush():77] Loading settings from /home/liqifeng/.config/wandb/settings
+2025-07-01 10:37:02,947 INFO    MainThread:3132253 [wandb_setup.py:_flush():77] Loading settings from /data1/lqf/behavior_simulation/catk/scripts/wandb/settings
+2025-07-01 10:37:02,947 INFO    MainThread:3132253 [wandb_setup.py:_flush():77] Loading settings from environment variables: {}
+2025-07-01 10:37:02,947 INFO    MainThread:3132253 [wandb_setup.py:_flush():77] Applying setup settings: {'_disable_service': False}
+2025-07-01 10:37:02,947 WARNING MainThread:3132253 [wandb_setup.py:_flush():77] Could not find program at -m src.run
+2025-07-01 10:37:02,947 INFO    MainThread:3132253 [wandb_setup.py:_flush():77] Inferring run settings from compute environment: {'program_relpath': None, 'program': '-m src.run'}
+2025-07-01 10:37:02,947 INFO    MainThread:3132253 [wandb_setup.py:_flush():77] Applying login settings: {}
+2025-07-01 10:37:02,947 INFO    MainThread:3132253 [wandb_init.py:_log_setup():524] Logging user logs to /data1/lqf/behavior_simulation/catk/scripts/logs/pre_bc-debug/runs/2025-07-01_10-36-54/wandb/run-20250701_103702-wvyx66hs/logs/debug.log
+2025-07-01 10:37:02,947 INFO    MainThread:3132253 [wandb_init.py:_log_setup():525] Logging internal logs to /data1/lqf/behavior_simulation/catk/scripts/logs/pre_bc-debug/runs/2025-07-01_10-36-54/wandb/run-20250701_103702-wvyx66hs/logs/debug-internal.log
+2025-07-01 10:37:02,947 INFO    MainThread:3132253 [wandb_init.py:init():608] calling init triggers
+2025-07-01 10:37:02,947 INFO    MainThread:3132253 [wandb_init.py:init():615] wandb.init called with sweep_config: {}
+config: {}
+2025-07-01 10:37:02,947 INFO    MainThread:3132253 [wandb_init.py:init():658] starting backend
+2025-07-01 10:37:02,947 INFO    MainThread:3132253 [wandb_init.py:init():662] setting up manager
+2025-07-01 10:37:02,950 INFO    MainThread:3132253 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-07-01 10:37:02,950 INFO    MainThread:3132253 [wandb_init.py:init():670] backend started and connected
+2025-07-01 10:37:02,954 INFO    MainThread:3132253 [wandb_init.py:init():768] updated telemetry
+2025-07-01 10:37:02,957 INFO    MainThread:3132253 [wandb_init.py:init():801] communicating run to backend with 90.0 second timeout
+2025-07-01 10:38:01,199 INFO    Thread-1 (wrapped_target):3132253 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/connection.py", line 207, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x7fa9c71bf390>, 'Connection to api.wandb.ai timed out. (connect timeout=20)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fa9c71bf390>, 'Connection to api.wandb.ai timed out. (connect timeout=20)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/wandb/sdk/internal/internal_api.py", line 345, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/wandb/sdk/lib/gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/requests/adapters.py", line 688, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fa9c71bf390>, 'Connection to api.wandb.ai timed out. (connect timeout=20)'))
+2025-07-01 10:38:32,967 ERROR   MainThread:3132253 [wandb_init.py:init():827] encountered error: Run initialization has timed out after 90.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+2025-07-01 10:38:32,967 ERROR   MainThread:3132253 [wandb_init.py:init():1239] error in wandb.init()
+Traceback (most recent call last):
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/wandb/sdk/wandb_init.py", line 1229, in init
+    return wi.init()
+           ^^^^^^^^^
+  File "/data1/lqf/conda_envs/catk/lib/python3.11/site-packages/wandb/sdk/wandb_init.py", line 833, in init
+    raise error
+wandb.errors.CommError: Run initialization has timed out after 90.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+2025-07-01 10:38:34,493 WARNING MsgRouterThr:3132253 [router.py:message_loop():77] message_loop has been closed
